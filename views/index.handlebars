@@ -1,0 +1,43 @@
+<!-- ./views/index.handlebars -->
+<div class="my-5">
+  <h2 class="text-center">你想對誰說幹話？</h2>
+</div>
+<form method="POST" action="/">
+  <div class="form row">
+    <div class="col-md-3 col-6 d-flex flex-wrap align-content-between mb-5">
+      <img class="img-fluid" src="images/angry-engineer.jpg" alt="angry-engineer.jpg">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <input type="radio" name="career" value="engineer"
+          {{#ifEquals options.career 'engineer'}}checked{{/ifEquals}}>工程師
+      </div>
+    </div>
+    <div class="col-md-3 col-6 d-flex flex-wrap align-content-between mb-5">
+      <img class="img-fluid" src="images/angry-designer.jpg" alt="angry-designer.jpg">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <input type="radio" name="career" value="designer"
+          {{#ifEquals options.career 'designer'}}checked{{/ifEquals}}>設計師
+      </div>
+    </div>
+    <div class="col-md-3 col-6 d-flex flex-wrap align-content-between mb-5">
+      <img class="img-fluid" src="images/angry-entrepreneur.jpg" alt="angry-entrepreneur.jpg">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <input type="radio" name="career" value="entrepreneur"
+          {{#ifEquals options.career 'entrepreneur'}}checked{{/ifEquals}}>創業家
+      </div>
+    </div>
+    <div class="col-md-3 col-6 d-flex flex-wrap align-content-between mb-5">
+      <img class="img-fluid" src="images/angry-politician.jpg" alt="angry-politician.jpg">
+      <div class="d-flex justify-content-center align-items-center w-100">
+        <input type="radio" name="career" value="politician"
+          {{#ifEquals options.career 'politician'}}checked{{/ifEquals}}>政治家
+      </div>
+    </div>
+    <div class="col-md-10 col-12 my-2" id="output">
+      <textarea class="form-control" rows="1">{{result}}</textarea>
+    </div>
+    <div class="col-md-2 col-6 my-2 text-center" id="submit-button">
+      <button class="btn btn-secondary btn-lg btn-block" type="submit">產生幹話</button>
+    </div>
+  </div>
+</form>
+</div>

@@ -1,0 +1,27 @@
+* {
+  font-family: '微軟正黑體';
+}
+
+nav {
+  background: rgb(200, 200, 200);
+  font-weight: bold;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+#output textarea {
+  font-size: 20px;
+}
+
+#submit-button button {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+  #submit-button {
+    margin: 0 auto;
+  }
+}
